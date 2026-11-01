@@ -1956,6 +1956,10 @@ class Operations:
         """GET /v1/commerce/stores/{storeId}/stats"""
         return self.request("GET", "/v1/commerce/stores/{storeId}/stats", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
 
+    def get_v1_compliance_gpc(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
+        """GET /v1/compliance/gpc - Whether a browser Global Privacy Control / Do Not Track signal counts as a tracking opt-out (default on)"""
+        return self.request("GET", "/v1/compliance/gpc", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
+
     def get_v1_compliance_orphan_purge(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
         """GET /v1/compliance/orphan-purge - Days after which a contact with no list, message or consent history is erased (null = never)"""
         return self.request("GET", "/v1/compliance/orphan-purge", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
@@ -3367,6 +3371,10 @@ class Operations:
     def get_v1_profiles_by_id_pgp_key(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
         """GET /v1/profiles/{id}/pgp-key - The contact's PGP public key, if any (email to them is encrypted while it is set)"""
         return self.request("GET", "/v1/profiles/{id}/pgp-key", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
+
+    def get_v1_profiles_by_id_predicted_gender(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
+        """GET /v1/profiles/{id}/predicted-gender - Gender inferred from the first name (likely_female, likely_male or uncertain); an inference, not a stored fact"""
+        return self.request("GET", "/v1/profiles/{id}/predicted-gender", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
 
     def get_v1_profiles_by_id_prediction(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
         """GET /v1/profiles/{id}/prediction"""
@@ -7795,6 +7803,10 @@ class Operations:
     def put_v1_commerce_stores_by_store_id_products_by_product_id_variants_by_variant_id(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
         """PUT /v1/commerce/stores/{storeId}/products/{productId}/variants/{variantId} - Create or replace a variant of a store product"""
         return self.request("PUT", "/v1/commerce/stores/{storeId}/products/{productId}/variants/{variantId}", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
+
+    def put_v1_compliance_gpc(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
+        """PUT /v1/compliance/gpc"""
+        return self.request("PUT", "/v1/compliance/gpc", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
 
     def put_v1_compliance_orphan_purge(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
         """PUT /v1/compliance/orphan-purge - Clean up contacts that never joined a list, got a message or gave consent"""
