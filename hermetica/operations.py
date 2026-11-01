@@ -7868,6 +7868,10 @@ class Operations:
         """PUT /v1/integrations/connections/{id}/declarative/push - Turn on sending changed profiles to this CRM/helpdesk (off by default), optionally for one segment"""
         return self.request("PUT", "/v1/integrations/connections/{id}/declarative/push", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
 
+    def put_v1_integrations_connections_by_id_declarative_webhook_secret(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
+        """PUT /v1/integrations/connections/{id}/declarative/webhook-secret - Save the signing secret the vendor shows only after it verified the webhook URL (e.g. Clover X-Clover-Auth); it is never returned"""
+        return self.request("PUT", "/v1/integrations/connections/{id}/declarative/webhook-secret", path_params=path, query=query, body=body, idempotency_key=idempotency_key)
+
     def put_v1_integrations_secrets_by_name(self, path: Optional[Dict[str, Any]] = None, query: Optional[Dict[str, Any]] = None, body: Any = None, idempotency_key: Optional[str] = None) -> Any:
         """PUT /v1/integrations/secrets/{name} - Create or replace a secret"""
         return self.request("PUT", "/v1/integrations/secrets/{name}", path_params=path, query=query, body=body, idempotency_key=idempotency_key)

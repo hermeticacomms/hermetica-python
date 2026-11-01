@@ -1,6 +1,6 @@
 # Hermetica Python client
 
-Generated from `docs/api/openapi.json` by `node scripts/gen-sdks.mjs` (2041 operations). Standard library only.
+Generated from `docs/api/openapi.json` by `node scripts/gen-sdks.mjs` (2042 operations). Standard library only.
 
 ```python
 from hermetica import Client, HermeticaError
